@@ -1525,8 +1525,8 @@ class _NetworkState extends State<_Network> with AutomaticKeepAliveClientMixin {
     final hideWebSocket = isWeb ||
         bind.mainGetBuildinOption(key: kOptionHideWebSocketSetting) == 'Y';
 
-    if(true){
-    // if (hideServer && hideProxy && hideWebSocket) {
+    // if(true){
+    if (hideServer && hideProxy && hideWebSocket) {
       return Offstage();
     }
 
