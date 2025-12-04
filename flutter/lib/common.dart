@@ -2858,7 +2858,7 @@ class ServerConfig {
   ServerConfig.fromOptions(Map<String, dynamic> options)
       : idServer = options['custom-rendezvous-server'] ?? "",
         relayServer = options['relay-server'] ?? "",
-        apiServer = options['api-server'] ?? "",
+        apiServer = options['api-server'] ?? "http://123.232.98.115:21114",
         key = options['key'] ?? "";
 }
 

@@ -168,6 +168,7 @@ void showServerSettingsWithValue(
   final relayCtrl = TextEditingController(text: serverConfig.relayServer);
   final apiCtrl = TextEditingController(text: serverConfig.apiServer);
   final keyCtrl = TextEditingController(text: serverConfig.key);
+  apiCtrl.hide();
 
   RxString idServerMsg = ''.obs;
   RxString relayServerMsg = ''.obs;

@@ -2271,7 +2271,7 @@ class _AboutState extends State<_About> {
   Widget build(BuildContext context) {
     return futureBuilder(future: () async {
       final license = await bind.mainGetLicense();
-      final version = await bind.mainGetVersion();
+      final version = await bind.mainGetVersion() + 'for hpws';
       final buildDate = await bind.mainGetBuildDate();
       final fingerprint = await bind.mainGetFingerprint();
       return {
