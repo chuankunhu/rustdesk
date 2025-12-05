@@ -1527,13 +1527,13 @@ class _NetworkState extends State<_Network> with AutomaticKeepAliveClientMixin {
   Widget network(BuildContext context) {
     final hideServer =
         bind.mainGetBuildinOption(key: kOptionHideServerSetting) == 'Y';
-    final hideProxy =
-        isWeb || bind.mainGetBuildinOption(key: kOptionHideProxySetting) == 'Y';
-    final hideWebSocket = isWeb ||
-        bind.mainGetBuildinOption(key: kOptionHideWebSocketSetting) == 'Y';
+    // final hideProxy =
+    //     isWeb || bind.mainGetBuildinOption(key: kOptionHideProxySetting) == 'Y';
+    // final hideWebSocket = isWeb ||
+    //     bind.mainGetBuildinOption(key: kOptionHideWebSocketSetting) == 'Y';
 
-    hideProxy = true;
-    hideWebSocket = true;
+    final hideProxy = true;
+    final hideWebSocket = true;
     // if(true){
     if (hideServer && hideProxy && hideWebSocket) {
       return Offstage();
