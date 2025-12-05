@@ -1532,6 +1532,8 @@ class _NetworkState extends State<_Network> with AutomaticKeepAliveClientMixin {
     final hideWebSocket = isWeb ||
         bind.mainGetBuildinOption(key: kOptionHideWebSocketSetting) == 'Y';
 
+    hideProxy = true;
+    hideWebSocket = true;
     // if(true){
     if (hideServer && hideProxy && hideWebSocket) {
       return Offstage();
@@ -2271,7 +2273,7 @@ class _AboutState extends State<_About> {
   Widget build(BuildContext context) {
     return futureBuilder(future: () async {
       final license = await bind.mainGetLicense();
-      final version = await bind.mainGetVersion() + 'for hpws';
+      final version = await bind.mainGetVersion() + ' for hpws';
       final buildDate = await bind.mainGetBuildDate();
       final fingerprint = await bind.mainGetFingerprint();
       return {
