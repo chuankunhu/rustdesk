@@ -168,7 +168,6 @@ void showServerSettingsWithValue(
   final relayCtrl = TextEditingController(text: serverConfig.relayServer);
   final apiCtrl = TextEditingController(text: serverConfig.apiServer);
   final keyCtrl = TextEditingController(text: serverConfig.key);
-  apiCtrl.hide();
 
   RxString idServerMsg = ''.obs;
   RxString relayServerMsg = ''.obs;
@@ -258,20 +257,20 @@ void showServerSettingsWithValue(
                         relayServerMsg.value),
                     SizedBox(height: 8),
                   ],
-                  buildField(
-                    translate('API Server'),
-                    apiCtrl,
-                    apiServerMsg.value,
-                    validator: (v) {
-                      if (v != null && v.isNotEmpty) {
-                        if (!(v.startsWith('http://') ||
-                            v.startsWith("https://"))) {
-                          return translate("invalid_http");
-                        }
-                      }
-                      return null;
-                    },
-                  ),
+                  // buildField(
+                  //   translate('API Server'),
+                  //   apiCtrl,
+                  //   apiServerMsg.value,
+                  //   validator: (v) {
+                  //     if (v != null && v.isNotEmpty) {
+                  //       if (!(v.startsWith('http://') ||
+                  //           v.startsWith("https://"))) {
+                  //         return translate("invalid_http");
+                  //       }
+                  //     }
+                  //     return null;
+                  //   },
+                  // ),
                   SizedBox(height: 8),
                   buildField('Key', keyCtrl, ''),
                   if (isInProgress)
